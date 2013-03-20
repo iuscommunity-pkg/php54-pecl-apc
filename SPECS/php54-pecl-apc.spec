@@ -15,7 +15,7 @@
 
 Summary:        APC caches and optimizes PHP intermediate code
 Name:           %{php_base}-pecl-apc
-Version:        3.1.13%{?patchver}
+Version:        3.1.14
 Release:        1.ius%{?dist}
 License:        PHP
 Group:          Development/Languages
@@ -94,6 +94,10 @@ fi
 %{_includedir}/php/ext/apc/apc_serializer.h
 
 %changelog
+* Thu Jan 10 2013 Jeffrey Ness <jeffrey.ness@rackspace.com> - 3.1.14-1.ius
+- Latest Beta sources, not yet a Stable branch with PHP 5.4 support.
+  https://bugs.launchpad.net/ius/+bug/1098124
+
 * Mon Nov 12 2012 Ben Harper <ben.harper@rackspace.com> - 3.1.13-1.ius
 - Latest upstream sources 
     
