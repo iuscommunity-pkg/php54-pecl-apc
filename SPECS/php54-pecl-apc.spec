@@ -16,7 +16,7 @@
 Summary:        APC caches and optimizes PHP intermediate code
 Name:           %{php_base}-pecl-apc
 Version:        3.1.13
-Release:        1.ius%{?dist}
+Release:        2.ius%{?dist}
 License:        PHP
 Group:          Development/Languages
 Vendor:         IUS Community Project 
@@ -32,7 +32,7 @@ Conflicts:      %{real_name} < %{base_ver}
 BuildRequires:  %{php_base}-devel %{php_base}-cli httpd-devel %{php_base}-pear 
 BuildRequires:  pcre-devel 
 # php54 now builds pcre from php source
-Requires:       %{php_base} >= 5.4.6
+#Requires:       %{php_base} >= 5.4.6
 
 Requires:       %{php_base}-zend-abi = %{php_zendabiver}
 Provides:      php-pecl(%{pecl_name}) = %{version}
@@ -94,6 +94,10 @@ fi
 %{_includedir}/php/ext/apc/apc_serializer.h
 
 %changelog
+* Thu Jul 25 2013 Ben Harper <ben.harper@rackspace.com> - 3.1.13-2.ius
+- removing Requires for php54:
+  https://bugs.launchpad.net/ius/+bug/1204492
+
 * Mon May 06 2013 Ben Harper <ben.harper@rackspace.com> - 3.1.13-1.ius
 - reverting version to rebuild due to:
   https://bugs.launchpad.net/ius/+bug/1115670
